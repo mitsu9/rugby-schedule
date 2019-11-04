@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <span class="navbar-brand mb-0 h1">試合日程</span>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-lg-12">
+          <div class="card" style="width: 30rem; margin-top:10px; margin-bottom:10px;">
+            <div class="card-body">
+              トップリーグ2019-2020シーズンの試合を検索できます.
+            </div>
+          </div>
+        </div>
+        <div id="app" class="col-xs-12 col-lg-12">
+          <schedule-table v-bind:games="games" v-bind:columns="columns"></schedule-table>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="main.js"></script>
+</html>
